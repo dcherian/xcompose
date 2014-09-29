@@ -1117,3 +1117,6 @@ include "%L"
 <Multi_key> <parenleft> <1> <1> <colon> <3> <0> <parenright>     : "🕦" U1F566 # CLOCK FACE ELEVEN-THIRTY
 <Multi_key> <parenleft> <1> <2> <colon> <3> <0> <parenright>     : "🕧" U1F567 # CLOCK FACE TWELVE-THIRTY
 
+# DC additions
+<Multi_key> <slash> <u>   : "µ" U00B5	# MICRO SIGN
+<Multi_key> <asciitilde>  : "∼"	U223C		# TILDE = LATEX \sim
