@@ -182,6 +182,9 @@ include "%L"
 <Multi_key> <slash> <equal>		: "≠"	U2260		# NOT EQUAL TO
 <Multi_key> <less> <equal>		: "≤"	U2264		# LESS-THAN OR EQUAL TO
 <Multi_key> <greater> <equal>		: "≥"	U2265		# GREATER-THAN OR EQUAL TO
+<Multi_key> <greater> <asciitilde>      : "≳"   U2273           # GREATER-THAN OR EQUIVALENT TO
+<Multi_key> <lesser> <asciitilde>       : "≲"   U2272           # LESSER-THAN OR EQUIVALENT TO
+
 <Multi_key> <exclam> <less> <greater>   : "≸"	U2278		# NEITHER LESS-THAN NOR GREATER-THAN
 # MUCH is usually enough for me.  No need for VERY.
 <Multi_key> <plus> <less>        	: "≪"	U226A		# MUCH LESS-THAN
@@ -475,6 +478,7 @@ include "%L"
 # etc.  But you would probably just switch to a Greek keyboard layout.
 
 # Custom additions: fractions
+<Multi_key> <1> <2>                     : "½"  U00BD           # FRACTION ONE HALF
 <Multi_key> <1> <3>                     : "⅓"  U2153           # VULGAR FRACTION ONE THIRD
 <Multi_key> <2> <3>                     : "⅔"  U2154           # VULGAR FRACTION TWO THIRDS
 # more extensive fractions from jsled
