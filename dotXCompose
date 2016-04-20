@@ -87,6 +87,7 @@ include "%L"
 <Multi_key> <asterisk> <1>		: "•"	U2022		# BULLET
 # By default <Multi_key> <period> <period> does this, but we broke that with the ... binding.
 <Multi_key> <o> <underscore>		: "⁃"   U2043		# HYPHEN BULLET
+<Multi_key> <o> <q>			: "◦"	U25E6	# WHITE BULLET
 <Multi_key> <o> <comma>			: "·"	periodcentered	# MIDDLE DOT
 # I don’t use this nearly as often as the em-dash sequence I’ve remapped it to:
 #<Multi_key> <space> <minus>		: "‑"	U2011		# NON-BREAKING HYPHEN
@@ -221,7 +222,7 @@ include "%L"
 <Multi_key> <less> <equal>		: "≤"	U2264		# LESS-THAN OR EQUAL TO
 <Multi_key> <greater> <equal>		: "≥"	U2265		# GREATER-THAN OR EQUAL TO
 <Multi_key> <greater> <asciitilde>      : "≳"   U2273           # GREATER-THAN OR EQUIVALENT TO
-<Multi_key> <lesser> <asciitilde>       : "≲"   U2272           # LESSER-THAN OR EQUIVALENT TO
+<Multi_key> <less> <asciitilde>       : "≲"   U2272           # LESSER-THAN OR EQUIVALENT TO
 
 <Multi_key> <exclam> <less> <greater>   : "≸"	U2278		# NEITHER LESS-THAN NOR GREATER-THAN
 # MUCH is usually enough for me.  No need for VERY.
