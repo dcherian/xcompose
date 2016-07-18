@@ -140,6 +140,9 @@ include "%L"
 <Multi_key> <Right> <minus>     	: "⇢"	U21E2		# RIGHTWARDS DASHED ARROW
 <Multi_key> <Down> <minus>      	: "⇣"	U21E3		# DOWNWARDS DASHED ARROW
 
+# Let's add some triangles
+>Multi_key> <D> <Up>    : "△" U25B3 # WHITE UP-POINTING TRIANGLE
+
 # Arrow keys don't always work: some apps trap them for cursor control and
 # other boring things.  The arrow symbols have alternate keystrokes.  Do
 # we need others for these printer's fists?  If so, what?  The -= and =-
