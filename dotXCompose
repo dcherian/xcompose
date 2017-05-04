@@ -1305,8 +1305,8 @@ include "%L"
 <Multi_key> <b> <minus> : "ƀ" U0180 # ALTERNATIVE BIT CURRENCY SIGN, LATIN SMALL LETTER B WITH STROKE
 
 # DC additions
-<Multi_key> <slash> <u>   : "µ" U00B5	# MICRO SIGN
-<Multi_key> <asciitilde>  : "∼"	U223C		# TILDE = LATEX \sim
+<Multi_key> <slash> <u>   : "µ" U00B5 # MICRO SIGN
+<Multi_key> <asciitilde>  : "∼"	U223C # TILDE = LATEX \sim
 <Multi_key> <^> <1> : "¹" U00B9 # SUPERSCRIPT ONE
 <Multi_key> <^> <2> : "²" U00B2 # SUPERSCRIPT TWO
 <Multi_key> <^> <3> : "³" U00B3 # SUPERSCRIPT THREE
@@ -1316,3 +1316,4 @@ include "%L"
 <Multi_key> <^> <7> : "⁷" U2077 # SUPERSCRIPT SEVEN
 <Multi_key> <^> <8> : "⁸" U2078 # SUPERSCRIPT EIGHT
 <Multi_key> <^> <9> : "⁹" U2079 # SUPERSCRIPT NINE
+<Multi_key> <p> <d> : "∂" U2202 # PARTIAL DIFFERENTIAL
