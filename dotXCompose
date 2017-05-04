@@ -24,6 +24,8 @@ include "%L"
 #<Multi_key> <1> <period>		  : "․"	U2024		# ONE DOT LEADER
 <Multi_key> <c> <1> <period>		  : "·"	U00B7		# MIDDLE DOT (maybe I can remember the keystroke better?
 <Multi_key> <period> <slash> <period>	: "⁒"	U2052		# COMMERCIAL MINUS SIGN
+### or && ?
+<Multi_key> <ampersand> <at>    :   "⅋" U214B   # TURNED AMPERSAND
 # Printable sign for space.  But is \<space> too useful a key combo to use
 # for this?
 <Multi_key> <backslash> <space>		: "␣"	U2423		# OPEN BOX
@@ -518,6 +520,8 @@ include "%L"
 <Multi_key> <asterisk> <p>		: "π"	U03C0		# GREEK SMALL LETTER PI
 # no mapping for q; in Emacs that's ";"
 # U037E GREEK QUESTION MARK is canonically equivalent to U003B SEMICOLON.
+# ... But that won't stop us from doing it anyway!!!
+<Multi_key> <asterisk> <period> <question> : ";"  U037E		# GREEK QUESTION MARK
 <Multi_key> <asterisk> <r>		: "ρ"	U03C1		# GREEK SMALL LETTER RHO
 <Multi_key> <asterisk> <s>		: "σ"	U03C3		# GREEK SMALL LETTER SIGMA
 <Multi_key> <asterisk> <t>		: "τ"	U03C4		# GREEK SMALL LETTER TAU
@@ -653,7 +657,7 @@ include "%L"
 <Multi_key> <percent> <0> <9>		: "Ⅸ"	U2168		# ROMAN NUMERAL NINE
 <Multi_key> <percent> <0> <x>		: "Ⅹ"	U2169		# ROMAN NUMERAL TEN
 # How do we handle eleven and twelve?
-<Multi_key> <percent> <underscore> <0> <1>	: "Ⅺ"	U216A	# ROMAN NUMERAL ELEVEL
+<Multi_key> <percent> <underscore> <0> <1>	: "Ⅺ"	U216A	# ROMAN NUMERAL ELEVEN
 <Multi_key> <percent> <underscore> <0> <2>	: "Ⅻ"	U216B	# ROMAN NUMERAL TWELVE
 <Multi_key> <percent> <0> <l>		: "Ⅼ"	U216C		# ROMAN NUMERAL FIFTY
 <Multi_key> <percent> <0> <c>		: "Ⅽ"	U216D		# ROMAN NUMERAL ONE HUNDRED
@@ -776,6 +780,9 @@ include "%L"
 <Multi_key> <Multi_key> <m> <a> <i> <l>		: "✉"	U2709	  # ENVELOPE
 <Multi_key> <Multi_key> <w> <h> <l> <c> <h>	: "♿"	U267F	  # WHEELCHAIR SYMBOL
 <Multi_key> <Multi_key> <m> <e> <d> 		: "☤"	U2624	  # CADEUCEUS
+## Don't usually do sequences, but exception made for the
+## "eyewitness" compound emoji sequence:
+<Multi_key> <Multi_key> <i> <w> <i> <t>     : "👁️‍🗨️"
 # Something different for STAFF OF AESCULAPIUS?
 <Multi_key> <Multi_key> <1> <m> <e> <d>		: "⚕"	U2695	# STAFF OF AESCULAPIUS
 # 26B0 COFFIN ?
@@ -914,13 +921,16 @@ include "%L"
 <Multi_key> <w> <w>			: "ʍ"	U028D		# LATIN SMALL LETTER TURNED W
 <Multi_key> <y> <y>			: "ʎ"	U028E		# LATIN SMALL LETTER TURNED Y
 <Multi_key> <a> <a>			: "ɐ"	U0250		# LATIN SMALL LETTER TURNED A
+<Multi_key> <h> <h>			: "ɥ"	U0265		# LATIN SMALL LETTER TURNED H
 # ı is already available in the "standard" .XCompose
 <Multi_key> <j> <period>    		: "ȷ"	U0237		# LATIN SMALL LETTER DOTLESS J
+<Multi_key> <exclam> <period>		: "Ꞌ"	UA78B		# LATIN CAPITAL LETTER SALTILLO
+<Multi_key> <exclam> <underscore> <period>		: "ꞌ"	UA78C		# LATIN SMALL LETTER SALTILLO
 # I'll use capitals for a different double
 <Multi_key> <W> <W>			: "ʬ"	U02AC		# LATIN LETTER BILABIAL PERCUSSIVE
+# Also handy for writing urls: http://ʬw.omniglot.com/
 # Sorry, I miss having this and hate having to use colon instead:
 <Multi_key> <colon> <plus>  	      	: "ː"	U02D0		# MODIFIER LETTER TRIANGULAR COLON
-# Also handy for writing urls: http://ʬw.omniglot.com/
 # ɣ? ᴥ?  Important enough to add? ᴥ is cool just as a "latin" letter.
 <Multi_key> <g> <h>	     	    : "ɣ"   U0263     # LATIN SMALL LETTER GAMMA
 # It looks like a ɣ and makes an "o" sorta sound:
@@ -1113,6 +1123,7 @@ include "%L"
 <Multi_key> <Multi_key> <v> <e> <s> <t> <a>    	: "⚶"	U26B6	# VESTA
 <Multi_key> <Multi_key> <c> <h> <i> <r> <o> <n>	: "⚷"	U26B7	# CHIRON
 <Multi_key> <Multi_key> <l> <i> <l> <i> <t> <h>	: "⚸"	U26B8	# BLACK MOON LILITH
+<Multi_key>  <bracketleft> <k> <e> <y> <bracketright> : "⚿"	U26BF	# SQUARED KEY
 
 # Unicode 6.0 gave us all kinds of things, perhaps more than we can use...
 
