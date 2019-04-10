@@ -136,7 +136,9 @@ include "%L"
 <Multi_key> <Left> <c>			: "↺"	U21BA		# ANTICLOCKWISE OPEN CIRCLE ARROW
 <Multi_key> <Right> <c>			: "↻"	U21BB		# CLOCKWISE OPEN CIRCLE ARROW
 <Multi_key> <Left> <asciitilde>		: "⇜"	U21DC		# LEFTWARDS SQUIGGLE ARROW
+<Multi_key> <asciitilde> <Left> <asciitilde>    : "⬳"  U2B33    # LONG LEFTWARDS SQUIGGLE ARROW
 <Multi_key> <Right> <asciitilde>	: "⇝"	U21DD		# RIGHTWARDS SQUIGGLE ARROW
+<Multi_key> <asciitilde> <Right> <asciitilde>   : "⟿"  U27FF    # LONG RIGHTWARDS SQUIGGLE ARROW
 <Multi_key> <Left> <bar>       		: "⇤"	U21E4		# LEFTWARDS ARROW TO BAR
 <Multi_key> <Right> <bar>       	: "⇥"	U21E5		# RIGHTWARDS ARROW TO BAR
 <Multi_key> <Left> <minus>     		: "⇠"	U21E0		# LEFTWARDS DASHED ARROW
@@ -261,6 +263,14 @@ include "%L"
 <Multi_key> <O> <U>		:	"Ȣ"	U0222	# LATIN CAPITAL LETTER OU
 <Multi_key> <o> <u>		:	"ȣ"	U0223	# LATIN SMALL LETTER OU
 <Multi_key> <y> <r>		:	"Ʀ"	U01A6	# LATIN LETTER YR
+# <o><r> might almost make more sense, as it's used when r follows [opb].
+# But it conflicts with system ®
+<Multi_key> <r> <o>             :       "ꝛ"     UA75B   # LATIN SMALL LETTER R ROTUNDA
+<Multi_key> <r> <0>             :       "ꝛ"     UA75B   # LATIN SMALL LETTER R ROTUNDA
+# Alas, <R><O> conflicts with ® anyway.
+<Multi_key> <R> <O>             :       "Ꝛ"     UA75A   # LATIN CAPITAL LETTER R ROTUNDA
+# something, anyway.
+<Multi_key> <R> <0>             :       "Ꝛ"     UA75A   # LATIN CAPITAL LETTER R ROTUNDA
 
 # Custom additions: Mathematical symbols
 <Multi_key> <exclam> <equal>		: "≠"	U2260		# NOT EQUAL TO
@@ -421,8 +431,8 @@ include "%L"
 <Multi_key> <greater> <parenright>: "⟩" U27E9	# MATHEMATICAL RIGHT ANGLE BRACKET
 <Multi_key> <bar> <bracketleft>	:   "⟦"	U27E6	# MATHEMATICAL LEFT WHITE SQUARE BRACKET
 <Multi_key> <bar> <bracketright>:   "⟧"	U27E7	# MATHEMATICAL RIGHT WHITE SQUARE BRACKET
-<Multi_key> <2> <greater> <parenleft> :   "⟪"	U27EA	# MATHEMATICAL LEFT DOUBLE ANGLE BRACKET
-<Multi_key> <2> <less> <parenright>   :   "⟫"	U27EB	# MATHEMATICAL RIGHT DOUBLE ANGLE BRACKET
+<Multi_key> <2> <less> <parenleft> :   "⟪"	U27EA	# MATHEMATICAL LEFT DOUBLE ANGLE BRACKET
+<Multi_key> <2> <greater> <parenright>   :   "⟫"	U27EB	# MATHEMATICAL RIGHT DOUBLE ANGLE BRACKET
 # Keystrokes inconsistent.
 <Multi_key> <bar> <bar> <parenleft>	:   "⟬"  U27EC	# MATHEMATICAL LEFT WHITE TORTOISE SHELL BRACKET
 <Multi_key> <bar> <bar> <parenright>:   "⟭"	U27ED	# MATHEMATICAL RIGHT WHITE TORTOISE SHELL BRACKET
@@ -890,6 +900,8 @@ include "%L"
 <Multi_key> <asciicircum> <asciicircum> <r>       : "ʳ"   U02B3           # SUPERSCRIPT R
 <Multi_key> <asciicircum> <asciicircum> <w>       : "ʷ"   U02B7           # SUPERSCRIPT W
 <Multi_key> <asciicircum> <asciicircum> <y>       : "ʸ"   U02B8           # SUPERSCRIPT Y
+# How could I have gone so long without being able to type "10ˣ" for "thanks"?
+<Multi_key> <asciicircum> <asciicircum> <x>       : "ˣ"   U02E3           # SUPERSCRIPT X
 # So I can use yᵗ/þᵗ and yᵉ/þᵉ
 <Multi_key> <asciicircum> <asciicircum> <e>	  : "ᵉ"	  U1D49		  # MODIFIER LETTER SMALL E
 <Multi_key> <asciicircum> <asciicircum> <t>	  : "ᵗ"	  U1D57		  # MODIFIER LETTER SMALL T
@@ -1092,6 +1104,7 @@ include "%L"
 <Multi_key> <R> <L> <O>			: "‮"	U202E	# RIGHT-TO-LEFT OVERRIDE
 <Multi_key> <B> <O> <M>			: "﻿"	UFEFF	# ZERO WIDTH NO-BREAK SPACE (Byte Order Mark)
 <Multi_key> <C> <G> <J>			: "͏"	U034F	# COMBINING GRAPHEME JOINER
+<Multi_key> <W> <J>                     : "⁠"    U2060   # WORD JOINER
 # These are sufficiently special and well-known that they don't need the
 # double <Multi_key> prefix I think.  The all-caps helps too.
 
@@ -1303,9 +1316,9 @@ include "%L"
 <Multi_key> <Multi_key> <t> <h> <m> <d> <n> : "👎"    U1F44E # THUMBS DOWN SIGN
 # More useful in chat than U+1F48F KISS
 <Multi_key> <Multi_key> <k> <i> <s> <s>	    : "💋"    U1F48B # KISS MARK
-# ⛔ U+26D4 NO ENTRY for "Don't go there"?
+<Multi_key> <Multi_key> <D> <N> <E>         : "⛔"    U26D4  # NO ENTRY
 # So many hearts... I'm not touching them for now.
-# And emoticons? (U+1F600 et seq)
+# And emoticons? (U+1F600 et seq) -- Moved to their own file.
 
 <Multi_key> <parenleft> <1> <colon> <0> <0> <parenright> : "🕐" U1F550 # CLOCK FACE ONE OCLOCK
 <Multi_key> <parenleft> <2> <colon> <0> <0> <parenright> : "🕑" U1F551 # CLOCK FACE TWO OCLOCK
@@ -1332,6 +1345,9 @@ include "%L"
 <Multi_key> <parenleft> <1> <0> <colon> <3> <0> <parenright>     : "🕥" U1F565 # CLOCK FACE TEN-THIRTY
 <Multi_key> <parenleft> <1> <1> <colon> <3> <0> <parenright>     : "🕦" U1F566 # CLOCK FACE ELEVEN-THIRTY
 <Multi_key> <parenleft> <1> <2> <colon> <3> <0> <parenright>     : "🕧" U1F567 # CLOCK FACE TWELVE-THIRTY
+
+# Real bitcoin symbol now.
+<Multi_key> <B> <bar> : "₿" U20BF  # BITCOIN SIGN
 
 # DC additions
 <Multi_key> <slash> <u>   : "µ" U00B5 # MICRO SIGN
