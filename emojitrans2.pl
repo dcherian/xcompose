@@ -1,4 +1,4 @@
-#!/usr/bin/perl -p
+#!/usr/bin/env -S perl -p
 use feature 'unicode_strings';
 use utf8;
 BEGIN { binmode(STDOUT, ":utf8");
@@ -36,8 +36,29 @@ BEGIN { binmode(STDOUT, ":utf8");
 	     '=' => 'equal',
 	     ' ' => 'space',
 	     '*' => 'asterisk',
+             '&' => 'ampersand',
 	     '♫' => 'Multi_key',
+             '←' => 'Left',
+             '→' => 'Right',
+             '↑' => 'Up',
+             '↓' => 'Down',
+             '⇐' => 'BackSpace',
+             '⇤' => 'Home',
+             '⇥' => 'End',
+             '⇑' => 'Prior',    # PageUp
+             '⇓' => 'Next',     # PageDown
+             '↵' => 'Return',
+             '∇' => 'Delete',   # Del, get it?
+             '˅' => 'Insert',   # it'll do.
+             '˃' => 'Control_R',
+             '˂' => 'Control_L',
+             # Function-keys? ¹ ²..ˣ ᵉ ᵗ?
 );
+
+        $specials = join "", keys %specials;
+        # Because of reasons
+        $specials =~ s/[]\\-]/\\$&/g;
+        $RE = qr{([[:alnum:]$specials]+)};
 
 sub splitup {
     my $arg=shift;
@@ -60,7 +81,7 @@ unless (/^#/) {
     my $hold=$_;
     s/<M_>/<Multi_key>/;
     s/<MM>/<Multi_key> <Multi_key>/;
-    s({([][[:alnum:] _+:;%@>=`<,.^\$+#()?!/|'"\\~*{}♫-]+)})(splitup($1))e;
+    s({($RE)})(splitup($1))e;
     if (length($1) > 7) {
 	$_=$hold;
 	s/^<M([M_])>/### <M$1>/;
